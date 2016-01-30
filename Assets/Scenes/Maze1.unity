@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VolumeMultiplier: 1
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: dbce012528f442e41ad7402ca0966459, type: 3}
 --- !u!4 &192219800
 Transform:
   m_ObjectHideFlags: 0
