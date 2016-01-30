@@ -1,0 +1,36 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class TextFade : MonoBehaviour {
+
+	public float fadeTime = 1.0f;
+	public Text TextItemGUI; //set with inspector
+
+	// change this alpha if you don't want it to fade from black
+	Color textColor = new Color(1,1,1,0);
+
+	// Use this for initialization
+	void Start () {
+
+		StartCoroutine (Fade ());
+
+
+	}
+
+	IEnumerator Fade()
+	{
+		float t = 0;
+		while (t < 1) {
+			textColor.a = t;
+			TextItemGUI.material.color = textColor;
+			t += Time.deltaTime / fadeTime;
+			yield return null;
+		}
+
+		textColor.a = 1;
+		TextItemGUI.material.color = textColor;
+	}
+	
+
+}
