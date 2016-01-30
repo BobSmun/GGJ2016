@@ -35,6 +35,7 @@ public class InputStreamReaderWriter : MonoBehaviour
         InputFrame thisFrame = input.GetFrameData(frameNumber);
 
         gameObject.transform.localPosition = thisFrame.pos;
+        gameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
 
     void PlayerUpdate()
