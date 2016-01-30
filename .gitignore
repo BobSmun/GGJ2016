@@ -8,6 +8,9 @@ Bin/
 Obj/
 UnityGenerated/
 Library/
+*_Data/
+*.pdb
+*.exe
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
