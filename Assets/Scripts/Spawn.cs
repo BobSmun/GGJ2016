@@ -5,8 +5,7 @@ public class Spawn : MonoBehaviour
 {
     public Transform player;
     public Transform ghost;
-
-    public float ghostAlpha = 0.125f;
+    
     private List<InputStream> ghostData = new List<InputStream>();
 
     private static Spawn instance = null;
