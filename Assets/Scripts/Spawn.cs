@@ -27,5 +27,9 @@ public class Spawn : MonoBehaviour
         // Create Player
         Transform p = (Transform)Instantiate(player, transform.localPosition, transform.localRotation);
         p.gameObject.layer = LayerMask.NameToLayer("Player");
+        
+        Timer t = FindObjectOfType<Timer>();
+        t.TimeCounter = 0;
+        t.enabled = true;
     }
 }

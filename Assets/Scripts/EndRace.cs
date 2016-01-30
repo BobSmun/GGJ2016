@@ -10,6 +10,9 @@ public class EndRace : MonoBehaviour
             // ... destroy the player.
             Destroy(col.gameObject);
 
+            Timer t = FindObjectOfType<Timer>();
+            t.enabled = false;
+
             // ... reload the level.
             StartCoroutine("ReloadGame");
         }
