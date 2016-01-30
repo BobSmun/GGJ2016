@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EndRace : MonoBehaviour
 {
@@ -7,7 +7,19 @@ public class EndRace : MonoBehaviour
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // ... destroy the player.
+            Destroy(col.gameObject);
+
+            // ... reload the level.
+            StartCoroutine("ReloadGame");
         }
+    }
+
+    IEnumerator ReloadGame()
+    {
+        // ... pause briefly
+        yield return new WaitForSeconds(0.1f);
+
+        Spawn.Instance.SpawnPlayer();
     }
 }
