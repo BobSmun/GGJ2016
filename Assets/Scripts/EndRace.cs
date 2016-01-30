@@ -13,8 +13,15 @@ public class EndRace : MonoBehaviour
             Timer t = FindObjectOfType<Timer>();
             t.enabled = false;
 
+            InputStreamReaderWriter control = col.gameObject.GetComponent<InputStreamReaderWriter>();
+            Spawn.Instance.AddGhostData(control.input);
+
             // ... reload the level.
             StartCoroutine("ReloadGame");
+        }
+        else
+        {
+            Destroy(col.gameObject);
         }
     }
 
@@ -22,7 +29,7 @@ public class EndRace : MonoBehaviour
     {
         // ... pause briefly
         yield return new WaitForSeconds(0.1f);
-
+        Spawn.Instance.KillCurrentGhosts();
         Spawn.Instance.SpawnPlayer();
     }
 }
