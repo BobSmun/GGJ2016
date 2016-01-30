@@ -6,14 +6,14 @@ newmtl palette
 	Ni 1.5000
 	d 1.0000
 	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
+	Tf 1.0000 1.0000 1.0000
 	illum 2
 	Ka 0.0000 0.0000 0.0000
 	Kd 1.0000 1.0000 1.0000
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Projects\GGJ_2016\3DModels\02_door_4X.png
-	map_Kd D:\Projects\GGJ_2016\3DModels\02_door_4X.png
+	map_Ka D:\Projects\GGJ_2016\3DModels\maze.png
+	map_Kd D:\Projects\GGJ_2016\3DModels\maze.png
 
 newmtl wire_027177027
 	Ns 32
