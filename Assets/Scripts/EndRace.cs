@@ -21,8 +21,7 @@ public class EndRace : MonoBehaviour
             Spawn.Instance.KillCurrentGhosts();
 
             LeaderBoard lb = Leaderboard.GetComponent<LeaderBoard>();
-            lb.AddTime(t.TimeCounter, "You");
-            lb.GenerateLeaderBoard();
+            lb.GenerateLeaderBoard(t.TimeCounter);
         }
         else
         {
