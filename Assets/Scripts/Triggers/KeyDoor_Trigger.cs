@@ -31,7 +31,6 @@ public class KeyDoor_Trigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (HasKey) {
 			OpenDoor ();
-			Debug.Log ("Hello");
 		}
 
 	}
