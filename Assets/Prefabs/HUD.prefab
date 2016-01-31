@@ -180,6 +180,7 @@ GameObject:
   - 224: {fileID: 22400540}
   - 222: {fileID: 22208928}
   - 114: {fileID: 11460206}
+  - 114: {fileID: 11443924}
   m_Layer: 5
   m_Name: LeaderBoard
   m_TagString: Untagged
@@ -198,6 +199,7 @@ GameObject:
   - 222: {fileID: 22277664}
   - 114: {fileID: 11439536}
   - 114: {fileID: 11406232}
+  - 114: {fileID: 11442914}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -366,7 +368,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11439536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11442914}
+        m_MethodName: ReplayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11406604
@@ -516,6 +529,29 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11442914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85609db5235a2b546a9054e9c47f0b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11443924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464908c9e7eb28f4c9d68f0d099e1626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeaderboardEntry: {fileID: 22405764}
 --- !u!114 &11453720
 MonoBehaviour:
   m_ObjectHideFlags: 1
