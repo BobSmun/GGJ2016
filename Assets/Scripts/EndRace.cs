@@ -9,11 +9,12 @@ public class EndRace : MonoBehaviour
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            col.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(false);
+
             // ... destroy the player.
             Destroy(col.gameObject);
 
             Timer t = FindObjectOfType<Timer>();
-            t.enabled = false;
             t.gameObject.SetActive(false);
 
             InputStreamReaderWriter control = col.gameObject.GetComponent<InputStreamReaderWriter>();

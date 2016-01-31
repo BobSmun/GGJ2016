@@ -11,4 +11,9 @@ public class LeaderBoard : MonoBehaviour
 
         LeaderboardEntry.Find("Time").GetComponent<UnityEngine.UI.Text>().text = time.ToString("F2");
     }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
 }

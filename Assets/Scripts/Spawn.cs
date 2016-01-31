@@ -5,7 +5,9 @@ public class Spawn : MonoBehaviour
 {
     public Transform player;
     public Transform ghost;
-    
+    public Transform timer;
+    public Transform leaderboard;
+
     private List<InputStream> ghostData = new List<InputStream>();
 
     private static Spawn instance = null;
@@ -34,14 +36,11 @@ public class Spawn : MonoBehaviour
         // Create Player
         Transform p = (Transform)Instantiate(player, transform.localPosition, transform.localRotation);
         p.gameObject.layer = LayerMask.NameToLayer("Player");
-        
-        Timer t = FindObjectOfType<Timer>();
-        t.TimeCounter = 0;
-        t.enabled = true;
-        t.gameObject.SetActive(true);
 
-        LeaderBoard lb = FindObjectOfType<LeaderBoard>();
-        lb.gameObject.SetActive(false);
+        timer.GetComponent<Timer>().TimeCounter = 0;
+        timer.GetComponent<Timer>().gameObject.SetActive(true);
+
+        leaderboard.GetComponent<LeaderBoard>().Hide();
 
         foreach(InputStream input in ghostData)
         {
