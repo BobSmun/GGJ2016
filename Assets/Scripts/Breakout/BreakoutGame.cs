@@ -32,7 +32,7 @@ public class BreakoutGame : MonoBehaviour
 
     void SpawnBall()
     {
-		Instantiate(ballPrefab, new Vector3 (-2.183723f, -106.35f, 2.32f), Quaternion.identity);
+		Instantiate(ballPrefab, new Vector3 (-2.183723f, -106.35f, 54.95f), Quaternion.identity);
     }
 
     public void HitBlock()

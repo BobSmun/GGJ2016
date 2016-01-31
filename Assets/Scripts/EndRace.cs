@@ -3,6 +3,17 @@ using System.Collections;
 
 public class EndRace : MonoBehaviour
 {
+
+	public GameObject GiantDoor1;
+	public GameObject GiantDoor2;
+	private Animator doorAnim1;
+	private Animator doorAnim2;
+
+	void Start() {
+		doorAnim1 = GiantDoor1.GetComponent<Animator> ();
+		doorAnim2 = GiantDoor2.GetComponent<Animator> ();
+	}
+
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Player"))
@@ -15,6 +26,12 @@ public class EndRace : MonoBehaviour
 
             InputStreamReaderWriter control = col.gameObject.GetComponent<InputStreamReaderWriter>();
             Spawn.Instance.AddGhostData(control.input);
+
+
+			//OPEN DOORS
+			doorAnim1.SetTrigger("OpenDoorLarge");
+			doorAnim2.SetTrigger("OpenDoorLarge");
+
 
             // ... reload the level.
             StartCoroutine("ReloadGame");
