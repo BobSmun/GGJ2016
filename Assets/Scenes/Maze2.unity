@@ -136,6 +136,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11433052, guid: 211b0464bb20bcb40bbc86f8ce16c57d, type: 2}
+      propertyPath: Leaderboard
+      value: 
+      objectReference: {fileID: 721396931}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211b0464bb20bcb40bbc86f8ce16c57d, type: 2}
   m_IsPrefabParent: 0
@@ -146,6 +150,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11405226, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 472822, guid: 237713e374bd0d645adafe2647913a01, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -176,11 +184,46 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472822, guid: 237713e374bd0d645adafe2647913a01, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405226, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405226, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405226, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 127053505}
+    - target: {fileID: 11405226, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReplayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405226, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 237713e374bd0d645adafe2647913a01, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &127053504 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 152390, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+  m_PrefabInternal: {fileID: 127053503}
+--- !u!114 &127053505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127053504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85609db5235a2b546a9054e9c47f0b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &274531294
 Prefab:
   m_ObjectHideFlags: 0
@@ -223,6 +266,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 825e65d3255208146a979c36029451f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &321276841 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22409182, guid: 237713e374bd0d645adafe2647913a01,
+    type: 2}
+  m_PrefabInternal: {fileID: 127053503}
+--- !u!1 &721396930 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 108170, guid: 237713e374bd0d645adafe2647913a01, type: 2}
+  m_PrefabInternal: {fileID: 127053503}
+--- !u!224 &721396931 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22445122, guid: 237713e374bd0d645adafe2647913a01,
+    type: 2}
+  m_PrefabInternal: {fileID: 127053503}
+--- !u!114 &721396932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721396930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464908c9e7eb28f4c9d68f0d099e1626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeaderboardEntry_1: {fileID: 1318374032}
+  LeaderboardEntry_2: {fileID: 321276841}
+  LeaderboardEntry_3: {fileID: 1426147105}
 --- !u!1 &1053803566
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +334,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1001 &1198220741
 Prefab:
   m_ObjectHideFlags: 0
@@ -306,6 +377,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b6fa96d569bf314db78209af359faf5, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1318374032 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22472250, guid: 237713e374bd0d645adafe2647913a01,
+    type: 2}
+  m_PrefabInternal: {fileID: 127053503}
+--- !u!224 &1426147105 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22436754, guid: 237713e374bd0d645adafe2647913a01,
+    type: 2}
+  m_PrefabInternal: {fileID: 127053503}
 --- !u!1 &1444741431
 GameObject:
   m_ObjectHideFlags: 0

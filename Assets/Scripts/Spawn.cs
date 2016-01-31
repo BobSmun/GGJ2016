@@ -38,6 +38,10 @@ public class Spawn : MonoBehaviour
         Timer t = FindObjectOfType<Timer>();
         t.TimeCounter = 0;
         t.enabled = true;
+        t.gameObject.SetActive(true);
+
+        LeaderBoard lb = FindObjectOfType<LeaderBoard>();
+        lb.gameObject.SetActive(false);
 
         foreach(InputStream input in ghostData)
         {
