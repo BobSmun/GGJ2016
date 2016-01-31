@@ -139,7 +139,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211b0464bb20bcb40bbc86f8ce16c57d, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &127053503
+--- !u!1001 &166579796
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -176,7 +176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472822, guid: 237713e374bd0d645adafe2647913a01, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 237713e374bd0d645adafe2647913a01, type: 2}
@@ -263,7 +263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1001 &1198220741
 Prefab:
   m_ObjectHideFlags: 0
