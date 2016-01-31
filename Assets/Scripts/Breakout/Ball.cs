@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour {
         }
 
         //Is the ball below -3? Then we're game over.
-        if(transform.position.z <= -3){            
+        if(transform.position.z <= -20){            
             BreakoutGame.SP.LostBall();
             Destroy(gameObject);
         }
