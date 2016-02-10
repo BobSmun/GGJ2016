@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 08524d90362b1de4f8480d6420ee89ba
-timeCreated: 1454213844
+guid: 4fdb472c6d03e1240ac04160d3f0956e
+timeCreated: 1454222070
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    400000: //RootNode
-    400002: default
+    100000: default
+    100002: //RootNode
+    400000: default
+    400002: //RootNode
     2300000: default
     3300000: default
     4300000: default
@@ -36,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.03
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
