@@ -5,6 +5,7 @@ public class EndRace : MonoBehaviour
 {
     public Transform Leaderboard;
 
+
 	public GameObject GiantDoor1;
 	public GameObject GiantDoor2;
 	private Animator doorAnim1;
@@ -31,13 +32,24 @@ public class EndRace : MonoBehaviour
             Spawn.Instance.AddGhostData(control.input);
             Spawn.Instance.KillCurrentGhosts();
 
+
+
+
+			LeaderBoard lb = Leaderboard.GetComponent<LeaderBoard>();
+			lb.GenerateLeaderBoard(t.TimeCounter);
+
 			//OPEN DOORS
 			doorAnim1.SetTrigger("OpenDoorLarge");
 			doorAnim2.SetTrigger("OpenDoorLarge");
 
 
-            LeaderBoard lb = Leaderboard.GetComponent<LeaderBoard>();
-            lb.GenerateLeaderBoard(t.TimeCounter);
+
+
+
+
+
+
+
         }
         else
         {
