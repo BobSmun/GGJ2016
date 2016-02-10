@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EndRace : MonoBehaviour
 {
+    public Transform Leaderboard;
 
 	public GameObject GiantDoor1;
 	public GameObject GiantDoor2;
@@ -18,35 +19,29 @@ public class EndRace : MonoBehaviour
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            col.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(false);
+
             // ... destroy the player.
             Destroy(col.gameObject);
 
             Timer t = FindObjectOfType<Timer>();
-            t.enabled = false;
+            t.gameObject.SetActive(false);
 
             InputStreamReaderWriter control = col.gameObject.GetComponent<InputStreamReaderWriter>();
             Spawn.Instance.AddGhostData(control.input);
-
+            Spawn.Instance.KillCurrentGhosts();
 
 			//OPEN DOORS
 			doorAnim1.SetTrigger("OpenDoorLarge");
 			doorAnim2.SetTrigger("OpenDoorLarge");
 
 
-            // ... reload the level.
-            StartCoroutine("ReloadGame");
+            LeaderBoard lb = Leaderboard.GetComponent<LeaderBoard>();
+            lb.GenerateLeaderBoard(t.TimeCounter);
         }
         else
         {
             Destroy(col.gameObject);
         }
-    }
-
-    IEnumerator ReloadGame()
-    {
-        // ... pause briefly
-        yield return new WaitForSeconds(0.1f);
-        Spawn.Instance.KillCurrentGhosts();
-        Spawn.Instance.SpawnPlayer();
     }
 }
