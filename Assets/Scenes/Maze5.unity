@@ -2222,8 +2222,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499194, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 11419458, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 209009681}
+    - target: {fileID: 11462344, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
+      propertyPath: UIObject
+      value: 
+      objectReference: {fileID: 958224187}
+    - target: {fileID: 11462344, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
+      propertyPath: doorLeft
+      value: 
+      objectReference: {fileID: 11893831}
+    - target: {fileID: 11462344, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
+      propertyPath: doorRight
+      value: 
+      objectReference: {fileID: 1771285871}
     - target: {fileID: 11456454, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
       propertyPath: UIObject
       value: 
@@ -2244,18 +2260,6 @@ Prefab:
       propertyPath: achievementScript
       value: 
       objectReference: {fileID: 832156454}
-    - target: {fileID: 11462344, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
-      propertyPath: UIObject
-      value: 
-      objectReference: {fileID: 958224187}
-    - target: {fileID: 11462344, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
-      propertyPath: doorLeft
-      value: 
-      objectReference: {fileID: 11893831}
-    - target: {fileID: 11462344, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
-      propertyPath: doorRight
-      value: 
-      objectReference: {fileID: 1771285871}
     - target: {fileID: 11416254, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
       propertyPath: doorLeft
       value: 
@@ -2264,10 +2268,6 @@ Prefab:
       propertyPath: doorRight
       value: 
       objectReference: {fileID: 859518486}
-    - target: {fileID: 11419458, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
-      propertyPath: key
-      value: 
-      objectReference: {fileID: 209009681}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b349d57f8b72884c83b3ce3aaddd5bd, type: 2}
   m_IsPrefabParent: 0

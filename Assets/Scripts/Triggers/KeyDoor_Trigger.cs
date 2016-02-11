@@ -1,18 +1,12 @@
 ﻿using UnityEngine;
-<<<<<<< HEAD
 using UnityEngine.UI;
-=======
->>>>>>> remotes/origin/master
 using System.Collections;
 
 public class KeyDoor_Trigger : MonoBehaviour {
 
 	public bool HasKey = false;
-<<<<<<< HEAD
 	public bool HasCollided = false;
 	public Text UIObject;
-=======
->>>>>>> remotes/origin/master
 
 	public GameObject doorLeft;
 	public GameObject doorRight;
@@ -26,7 +20,6 @@ public class KeyDoor_Trigger : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-<<<<<<< HEAD
 	void Update () {
 
 		if(HasKey && HasCollided && Input.GetKey(KeyCode.E)){
@@ -34,9 +27,6 @@ public class KeyDoor_Trigger : MonoBehaviour {
 			UIObject.text = "";
 			Destroy (this);
 		}
-=======
-	void FixedUpdate () {
->>>>>>> remotes/origin/master
 	
 	}
 
@@ -48,7 +38,6 @@ public class KeyDoor_Trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-<<<<<<< HEAD
 
 		HasCollided = true;
 
@@ -70,11 +59,4 @@ public class KeyDoor_Trigger : MonoBehaviour {
 		HasCollided = false;
 		UIObject.text = "";
 	}
-=======
-		if (HasKey) {
-			OpenDoor ();
-		}
-
-	}
->>>>>>> remotes/origin/master
 }

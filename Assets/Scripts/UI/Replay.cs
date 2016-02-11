@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Replay : MonoBehaviour
 {
-<<<<<<< HEAD
 	
 	private GameObject player;
 
@@ -16,10 +15,3 @@ public class Replay : MonoBehaviour
 		Destroy(player);
     }
 }
-=======
-    public void ReplayGame()
-    {
-        Spawn.Instance.SpawnPlayer();
-    }
-}
->>>>>>> remotes/origin/master
