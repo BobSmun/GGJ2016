@@ -3,8 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class Replay : MonoBehaviour
 {
-    public void ReplayGame()
+	
+	private GameObject player;
+
+	public void ReplayGame()
     {
-        Spawn.Instance.SpawnPlayer();
+		
+		Spawn.Instance.SpawnPlayer();
+        Time.timeScale = 1;
+        player = GameObject.FindGameObjectWithTag ("Player");
+		Destroy(player);
     }
 }

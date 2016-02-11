@@ -6,24 +6,17 @@ public class EndRace : MonoBehaviour
     public Transform Leaderboard;
 
 
-	public GameObject GiantDoor1;
-	public GameObject GiantDoor2;
-	private Animator doorAnim1;
-	private Animator doorAnim2;
-
-	void Start() {
-		doorAnim1 = GiantDoor1.GetComponent<Animator> ();
-		doorAnim2 = GiantDoor2.GetComponent<Animator> ();
-	}
-
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            col.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(false);
+			col.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController> ().m_MouseLook.SetCursorLock (false);
 
             // ... destroy the player.
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
+
+			//pause the game
+			Time.timeScale = 0;
 
             Timer t = FindObjectOfType<Timer>();
             t.gameObject.SetActive(false);
@@ -34,26 +27,14 @@ public class EndRace : MonoBehaviour
 
 
 
-
 			LeaderBoard lb = Leaderboard.GetComponent<LeaderBoard>();
 			lb.GenerateLeaderBoard(t.TimeCounter);
-
-			//OPEN DOORS
-			doorAnim1.SetTrigger("OpenDoorLarge");
-			doorAnim2.SetTrigger("OpenDoorLarge");
-
-
-
-
-
-
-
 
 
         }
         else
         {
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
         }
     }
 }

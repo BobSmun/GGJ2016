@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Paddle : MonoBehaviour {
 
-    public float moveSpeed = 15;
+    public float moveSpeed = 20;
 		
 	void Update () {
         float moveInput = Input.GetAxis("BreakoutHoriz") * Time.deltaTime * moveSpeed;
