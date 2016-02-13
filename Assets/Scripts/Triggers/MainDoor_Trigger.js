@@ -9,8 +9,6 @@ var timer: CanvasGroup;
 var doorLeft: Animator;
 var doorRight: Animator;
 
-var achievementScript: AchievementTracker;
-
 function Start(){
     
 }
@@ -18,8 +16,6 @@ function Start(){
 function Update(){
 
 	if (Input.GetKey(KeyCode.E) && hasCollided == true){
-
-	    achievementScript.badSecret = true;
   		timer.alpha = 0;
   		doorLeft.SetTrigger("OpenDoorLarge");
 		doorRight.SetTrigger("OpenDoorLarge");
