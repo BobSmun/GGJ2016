@@ -10,7 +10,7 @@ function OnTriggerEnter(c:Collider){
     if(c.gameObject.tag =="Player"){
 
         achievementScript.firstRun = true;
-        mainDoorTrigger.SetActive(true);
+        mainDoorTrigger.SetActive(true);        
         Destroy(this);
     }
 }
