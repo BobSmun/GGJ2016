@@ -9,6 +9,5 @@ public function ResumeFromPause () {
     Timer.SetActive(true);
     Time.timeScale = 1.0;
     pauseMenu.SetActive(false);
-    Cursor.visible = false;
 }
 
