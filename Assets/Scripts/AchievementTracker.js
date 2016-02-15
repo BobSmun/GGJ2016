@@ -56,19 +56,19 @@ function Update () {
         playArcade = false;
     }
     if(theresMore){
-        AchievementTitle.text = "Following Steps";
+        AchievementTitle.text = "Activation Complete";
         AchievementDescription.text = "Unlock the cave exit";
         achievementAnim.SetTrigger("AchievementUnlocked");
-        pauseAchiev04.text = "Following Steps";
+        pauseAchiev04.text = "Activation complete";
         pauseAchiev04.color = Color.white;
         pauseIcon04.color = Color.white;
         theresMore = false;
     }
     if(octopusIdol){
-        AchievementTitle.text = "Octopus Idol";
-        AchievementDescription.text = "Reach the heart of the mountain";
+        AchievementTitle.text = "Don't trust your eyes";
+        AchievementDescription.text = "Reach the entrance of the octopus idol";
         achievementAnim.SetTrigger("AchievementUnlocked");
-        pauseAchiev05.text = "Octopus Idol";
+        pauseAchiev05.text = "Don't trust your eyes";
         pauseAchiev05.color = Color.white;
         pauseIcon05.color = Color.white;
         octopusIdol = false;

@@ -6,6 +6,7 @@ var hasCollided : boolean = false;
 var labelText : String = "";
 var prompt : Text;
 var poleTop: Animator;
+var poleSound: AudioSource;
 
 function Start(){
     
@@ -17,6 +18,7 @@ function Update(){
            
         if(CaveControl.pole03Active){
             CaveControl.pole04Active = true;
+            poleSound.enabled = true;
             poleTop.SetTrigger("ActivatePole");        
             prompt.text = "";
             Destroy(this);
