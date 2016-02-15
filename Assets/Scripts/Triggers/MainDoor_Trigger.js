@@ -8,6 +8,8 @@ var UIObject : Text;
 var timer: CanvasGroup;
 var doorLeft: Animator;
 var doorRight: Animator;
+var doorLeftSound: AudioSource;
+var doorRightSound: AudioSource;
 
 function Start(){
     
@@ -16,9 +18,11 @@ function Start(){
 function Update(){
 
 	if (Input.GetKey(KeyCode.E) && hasCollided == true){
-  		timer.alpha = 0;
-  		doorLeft.SetTrigger("OpenDoorLarge");
-		doorRight.SetTrigger("OpenDoorLarge");
+	    timer.alpha = 0;	    
+	    doorLeft.SetTrigger("OpenDoorLarge");	    
+	    doorRight.SetTrigger("OpenDoorLarge");
+	    doorLeftSound.enabled = true;
+	    doorRightSound.enabled = true;
 		UIObject.text = "";
 		Destroy(this);
 

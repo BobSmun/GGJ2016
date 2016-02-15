@@ -7,6 +7,7 @@ public class KeyDoor_Trigger : MonoBehaviour {
 	public bool HasKey = false;
 	public bool HasCollided = false;
 	public Text UIObject;
+    private AudioSource smallDoorSound;
 
 	public GameObject doorLeft;
 	public GameObject doorRight;
@@ -17,6 +18,7 @@ public class KeyDoor_Trigger : MonoBehaviour {
 	void Start () {
 		doorLeft_anim = doorLeft.GetComponent<Animator> ();
 		doorRight_anim = doorRight.GetComponent<Animator> ();
+        smallDoorSound = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -33,8 +35,7 @@ public class KeyDoor_Trigger : MonoBehaviour {
 	void OpenDoor() {
 		doorLeft_anim.SetTrigger ("OpenSmallDoor");
 		doorRight_anim.SetTrigger ("OpenSmallDoor");
-		//Debug.Log ("Triggered");
-		//doorRight_anim.SetBool ("Right_SmallDoor", true);
+        smallDoorSound.enabled = true;
 	}
 
 	void OnTriggerEnter(Collider other) {
