@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class Spawn : MonoBehaviour
 {
     public Transform player;
+    private Transform playerInstance;
     public Transform ghost;
     public Transform timer;
     public Transform leaderboard;
@@ -28,14 +29,17 @@ public class Spawn : MonoBehaviour
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Ghost"), true);
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Ghost"), LayerMask.NameToLayer("Ghost"), true);
 
+        // Create Player
+        playerInstance = (Transform)Instantiate(player, transform.localPosition, transform.localRotation);
+        playerInstance.gameObject.layer = LayerMask.NameToLayer("Player");
+
         SpawnPlayer();
     }
 
     public void SpawnPlayer()
     {
-        // Create Player
-        Transform p = (Transform)Instantiate(player, transform.localPosition, transform.localRotation);
-        p.gameObject.layer = LayerMask.NameToLayer("Player");
+        playerInstance.localPosition = transform.localPosition;
+        playerInstance.localRotation = transform.localRotation;
 
         timer.GetComponent<Timer>().TimeCounter = 0;
         timer.GetComponent<Timer>().gameObject.SetActive(true);
@@ -46,6 +50,9 @@ public class Spawn : MonoBehaviour
         {
             CreateGhostObject(input);
         }
+
+        //resume the game
+        Time.timeScale = 1;
     }
 
     public void CreateGhostObject(InputStream input)
@@ -59,7 +66,13 @@ public class Spawn : MonoBehaviour
         control.input = input;
     }
 
-    public void AddGhostData(InputStream input)
+    public void SaveGhost()
+    {
+        InputStreamReaderWriter control = playerInstance.GetComponent<InputStreamReaderWriter>();
+        AddGhostData(control.input);
+    }
+
+    private void AddGhostData(InputStream input)
     {
         if(input == null
             || input.Count == 0)
