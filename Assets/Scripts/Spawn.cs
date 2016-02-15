@@ -59,6 +59,9 @@ public class Spawn : MonoBehaviour
             CreateGhostObject(input);
         }
 
+        InputStreamReaderWriter control = playerInstance.GetComponent<InputStreamReaderWriter>();
+        control.RebaseInput();
+
         //resume the game
         Time.timeScale = 1;
     }
