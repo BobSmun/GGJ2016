@@ -10,7 +10,7 @@ public class EndRace : MonoBehaviour
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-			col.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController> ().m_MouseLook.SetCursorLock (false);
+            Spawn.Instance.SetCursorLock (false);
 
             //Player object has camera, so we don't want to destroy it
 

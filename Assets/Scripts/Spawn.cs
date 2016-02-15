@@ -36,10 +36,18 @@ public class Spawn : MonoBehaviour
         SpawnPlayer();
     }
 
+    public void SetCursorLock(bool value)
+    {
+        playerInstance.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = value;
+        Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !value;
+    }
+
     public void SpawnPlayer()
     {
         playerInstance.localPosition = transform.localPosition;
         playerInstance.localRotation = transform.localRotation;
+        SetCursorLock(true);
 
         timer.GetComponent<Timer>().TimeCounter = 0;
         timer.GetComponent<Timer>().gameObject.SetActive(true);

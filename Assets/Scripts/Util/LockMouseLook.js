@@ -1,13 +1,16 @@
 ﻿//#pragma strict
 
 var charController = gameObject.GetComponent("FirstPersonController");
+var previouslyPaused = !GlobalSwitches.isPaused;
 
-function Update () {    
+function Update()
+{
+    if (GlobalSwitches.isPaused != previouslyPaused)
+    {
+        charController.enabled = !GlobalSwitches.isPaused;
+        Cursor.lockState = GlobalSwitches.isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = GlobalSwitches.isPaused;
 
-    if(GlobalSwitches.isPaused == true){
-        charController.enabled = false;
-    }
-    else{
-        charController.enabled = true;
+        previouslyPaused = GlobalSwitches.isPaused;
     }
 }
