@@ -12,8 +12,7 @@ public class EndRace : MonoBehaviour
         {
 			col.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController> ().m_MouseLook.SetCursorLock (false);
 
-            // ... destroy the player.
-            //Destroy(col.gameObject);
+            //Player object has camera, so we don't want to destroy it
 
 			//pause the game
 			Time.timeScale = 0;
@@ -21,20 +20,16 @@ public class EndRace : MonoBehaviour
             Timer t = FindObjectOfType<Timer>();
             t.gameObject.SetActive(false);
 
-            InputStreamReaderWriter control = col.gameObject.GetComponent<InputStreamReaderWriter>();
-            Spawn.Instance.AddGhostData(control.input);
+            Spawn.Instance.SaveGhost();
             Spawn.Instance.KillCurrentGhosts();
-
-
 
 			LeaderBoard lb = Leaderboard.GetComponent<LeaderBoard>();
 			lb.GenerateLeaderBoard(t.TimeCounter);
-
-
         }
         else
         {
-            //Destroy(col.gameObject);
+            //kill individual ghost when it reaches end
+            Destroy(col.gameObject);
         }
     }
 }
