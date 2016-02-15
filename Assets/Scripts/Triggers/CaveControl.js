@@ -4,6 +4,8 @@ var caveDoor: Animator;
 var caveLines: Animator;
 var caveLines02: Animator;
 var achievementScript: AchievementTracker;
+var caveSound01: AudioSource;
+var caveSound02: AudioSource;
 
 public static var pole01Active: boolean = false;
 public static var pole02Active: boolean = false;
@@ -23,6 +25,8 @@ function Update () {
         caveDoor.SetTrigger("OpenCaveDoor");
         caveLines.SetTrigger("CaveLinesOn");
         caveLines02.SetTrigger("CaveLinesOn");
+        caveSound01.enabled = true;
+        caveSound02.enabled = true;
         achievementScript.theresMore = true;
         pole01Active = false;
     }    

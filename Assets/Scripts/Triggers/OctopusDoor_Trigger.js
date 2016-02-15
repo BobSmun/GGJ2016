@@ -1,5 +1,6 @@
 ﻿var octopusDoor: Animator;
 var doorSound: AudioSource;
+var octopusSound: AudioSource;
  
 function OnTriggerEnter(c:Collider){
 
@@ -7,6 +8,7 @@ function OnTriggerEnter(c:Collider){
 
         octopusDoor.SetTrigger("OctopusOpen"); 
         doorSound.enabled = true;
+        octopusSound.enabled = true;
     }
 }
  

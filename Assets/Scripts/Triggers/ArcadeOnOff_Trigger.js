@@ -4,12 +4,19 @@ import UnityEngine.UI;
 
 var hasCollided: boolean = false;
 var arcadeDoor: Animator;
+var arcadeDoorSound: AudioSource;
 var arcadeSwitch: Animator;
 var arcadeOn: boolean = true;
 var prompt: Text;
+var arcadeLight: GameObject;
+private var arcadeSound: AudioSource;
 
 var achievementScript: AchievementTracker;
 
+
+function Start(){
+    arcadeSound = gameObject.GetComponent(AudioSource);
+}
 
 function Update(){
 
@@ -19,6 +26,9 @@ function Update(){
         
         if(Input.GetKeyDown(KeyCode.E)) {  
             arcadeSwitch.SetBool ("ArcadeOn", false);
+            arcadeLight.SetActive(false);
+            arcadeDoorSound.enabled = true;
+            arcadeSound.enabled = true;
             arcadeOn = false;   
             arcadeDoor.SetTrigger("OpenArcadeDoor");
             achievementScript.playArcade = true;
