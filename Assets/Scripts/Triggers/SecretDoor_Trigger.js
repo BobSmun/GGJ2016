@@ -4,6 +4,7 @@ var mainDoorLeft: Animator;
 var mainDoorRight: Animator;
 var secretDoor: Animator;
 var secretDoorSound: AudioSource;
+var closeDoorTrigger: GameObject;
 var endRace: GameObject;
 var endGame: GameObject;
 var caveSound: AudioSource;
@@ -19,6 +20,7 @@ function OnTriggerEnter(c:Collider){
         secretDoorSound.enabled = true;
         endRace.SetActive(false);
         endGame.SetActive(true);
+        closeDoorTrigger.SetActive(true);
 
         
     }

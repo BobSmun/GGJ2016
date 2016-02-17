@@ -1,6 +1,7 @@
 ﻿var hasCollided : boolean = false;
 var doorLeft: Animator;
 var doorRight: Animator;
+var doorOpenclip: AudioClip;
 var doorSound;
 
 function Start(){
@@ -11,16 +12,18 @@ function OnTriggerEnter(c:Collider){
 
     if(c.gameObject.tag =="Player"){
 
-        doorSound.enabled = true;
+        doorSound.PlayOneShot(doorOpenclip, 0.7F);
   		doorLeft.SetTrigger("OpenDoorLarge");
 		doorRight.SetTrigger("OpenDoorLarge");
   	}
 }
  
-function OnTriggerExit( other : Collider ){
+function OnTriggerExit( c: Collider ){
 
-    doorSound.enabled = false;
- 	doorLeft.SetTrigger("CloseDoorLarge");
-	doorRight.SetTrigger("CloseDoorLarge");
+    if(c.gameObject.tag =="Player"){
 
+        doorSound.PlayOneShot(doorOpenclip, 0.7F);
+        doorLeft.SetTrigger("CloseDoorLarge");
+        doorRight.SetTrigger("CloseDoorLarge");
+    }
 }
