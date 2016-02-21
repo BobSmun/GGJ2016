@@ -3,6 +3,7 @@
 var caveDoor: Animator;
 var caveLines: Animator;
 var caveLines02: Animator;
+var arcadeDoor: Animator;
 var achievementScript: AchievementTracker;
 var caveSound01: AudioSource;
 var caveSound02: AudioSource;
@@ -25,6 +26,7 @@ function Update () {
         caveDoor.SetTrigger("OpenCaveDoor");
         caveLines.SetTrigger("CaveLinesOn");
         caveLines02.SetTrigger("CaveLinesOn");
+        arcadeDoor.SetTrigger("CloseArcadeDoor");
         caveSound01.enabled = true;
         caveSound02.enabled = true;
         achievementScript.theresMore = true;

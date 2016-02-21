@@ -1,26 +1,19 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class Paddle : MonoBehaviour {
+public class Paddle : MonoBehaviour
+{
 
-    public float moveSpeed = 20;
-		
-	void Update () {
-        float moveInput = Input.GetAxis("BreakoutHoriz") * Time.deltaTime * moveSpeed;
-        transform.position += new Vector3(moveInput, 0, 0);
+    public float paddleSpeed = 1f;
 
-        float max = 16.5f;
-        if (transform.position.x <= -15.5f || transform.position.x >= 13f)
-        {
-            float xPos = Mathf.Clamp(transform.position.x, -15.5f, 13f); //Clamp between min -5 and max 5
-            transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
-        }
-	}
 
-    void OnCollisionExit(Collision collisionInfo ) {
-        //Add X velocity..otherwise the ball would only go up&down
-        Rigidbody rigid = collisionInfo.rigidbody;
-        float xDistance = rigid.position.x - transform.position.x;
-        rigid.velocity = new Vector3(rigid.velocity.x + xDistance/2, rigid.velocity.y, rigid.velocity.z);
+    private Vector3 playerPos = new Vector3(0, 0, 0);
+
+    void Update()
+    {
+        float xPos = transform.position.x + (Input.GetAxis("BreakoutHoriz") * paddleSpeed);
+        playerPos = new Vector3(Mathf.Clamp(xPos, -8f, 8f), -9.5f, -300);
+        transform.position = playerPos;
+
     }
 }
