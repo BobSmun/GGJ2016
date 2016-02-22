@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
-var mainDoorLeft: Animator;
-var mainDoorRight: Animator;
+//var mainDoorLeft: Animator;
+//var mainDoorRight: Animator;
 var secretDoor: Animator;
 var secretDoorSound: AudioSource;
 var closeDoorTrigger: GameObject;
@@ -13,8 +13,8 @@ function OnTriggerEnter(c:Collider){
 
     if(c.gameObject.tag =="Player"){
         
-        mainDoorLeft.SetTrigger ("CloseDoorLarge");
-        mainDoorRight.SetTrigger ("CloseDoorLarge");
+        //mainDoorLeft.SetTrigger ("CloseDoorLarge");
+        //mainDoorRight.SetTrigger ("CloseDoorLarge");
         secretDoor.SetTrigger ("OpenSecretDoor");
         caveSound.enabled = false;
         secretDoorSound.enabled = true;
